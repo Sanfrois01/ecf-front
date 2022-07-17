@@ -77,6 +77,7 @@ const Tarifs = () => {
       <div className="d-flex justify-content-center mx-5">
 
       <FilterableProductTable products={PRODUCTS}/>
+      
       </div>
     </>
   )

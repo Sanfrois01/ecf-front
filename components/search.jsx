@@ -6,14 +6,14 @@ function Search() {
   const [datas, setDatas] = useState ([]);
   const [searchCategories, setSearchCategories] = useState ("");
 
-  // useEffect( ()=> {
+  useEffect( ()=> {
 
 
-  //  fetch('https://api.unsplash.com/photos/?client_id=9cIpw06nNZZIL58L3dqab_EZPYaRPhmv3-qQUYBuVsY')
-  //  .then(response => response.json())
-  //  .then(json => setDatas(json))
+   fetch('https://api.unsplash.com/photos/?client_id=9cIpw06nNZZIL58L3dqab_EZPYaRPhmv3-qQUYBuVsY')
+   .then(response => response.json())
+   .then(json => setDatas(json))
 
-  // },[]); 
+  },[]); 
 
   const handleSearchCategories= (e) => {
     let value = e.target.value;
@@ -35,7 +35,7 @@ function Search() {
 
 
 
-   {/* <div className='mx-5'>
+   <div className='mx-5'>
 
       {datas
       .filter((val) => {
@@ -43,12 +43,11 @@ function Search() {
       })
       .map((val) => {
         return (
-          <div className="d-flex" key={val.id}>
-          {val.id}
+          <div className="d-flex" key={val.urls.small}>
           </div>
         );
       })}
-    </div> */}
+    </div>
 
     </>
     );

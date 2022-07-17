@@ -1,13 +1,7 @@
 
 import { useState , useEffect } from "react";
 import React from "react";
-import Bapteme from "../components/categories/bapteme";
-import Bebe from "../components/categories/Bebe";
-import Couple from "../components/categories/couple"
-import Famille from "../components/categories/Famille"
-import Grossesse from "../components/categories/Grossesse"
-import Mariage from "../components/categories/Mariage"
-
+import ButtonCategory from "../components/ButtonCategory";
 
 import Header from "../components/header";
 import Search from "../components/search";
@@ -24,26 +18,18 @@ const Galerie = () => {
 
   },[]); 
 
-
-  function ImageGalery({images}){
-    <img></img>
-  }
-
-  class PopImageGalery extends React.Component {
-    render () {
-      const{images} = this.props
-      return (
-        <ImageGalery images={images} />
-      )}
-  }
-
-  
-
   return (
     <>
     <Header/>
     <h1 className="text-center py-5">Galerie</h1>
     <Search/>
+    <div className="d-flex justify-content-center">
+    <ButtonCategory name = "Bapteme"/>
+    <ButtonCategory name = "Bebe"/>
+
+  
+    </div>
+
     </>
   )
 }

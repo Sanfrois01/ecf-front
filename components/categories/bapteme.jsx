@@ -26,8 +26,6 @@ const Bapteme = () =>{
           </>
         );
     });
-
-    
   }
 
     return (
