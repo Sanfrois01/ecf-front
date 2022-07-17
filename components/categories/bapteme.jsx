@@ -1,4 +1,5 @@
 import React, { useEffect , useState } from 'react';
+import Image from 'next/image'
 
 const Bapteme = () =>{
 
@@ -22,7 +23,7 @@ const Bapteme = () =>{
         return (
           <>
           <div className="d-flex justify-content-center my-3"></div>
-          <img className="img-thumbnail rounded mx-3 w-100" key={imagesBapteme.id}  src={imagesBapteme}></img>
+          <Image className="Image-thumbnail rounded mx-3 w-100" key={imagesBapteme.id}  src={imagesBapteme}></Image>
           </>
         );
     });
