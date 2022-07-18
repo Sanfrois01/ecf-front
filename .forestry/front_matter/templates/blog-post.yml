@@ -1,4 +1,9 @@
 ---
 label: Blog Post
 hide_body: false
-fields: []
+fields:
+- name: photo
+  type: image_gallery
+  config: {}
+  label: photo
+  description: mes photos
