@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import React from "react";
+import Footer from "../components/footer";
 
 
 const Tarifs = () => {
@@ -77,8 +78,8 @@ const Tarifs = () => {
       <div className="d-flex justify-content-center mx-5">
 
       <FilterableProductTable products={PRODUCTS}/>
-      
       </div>
+      <Footer/>
     </>
   )
 }

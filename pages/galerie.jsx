@@ -24,8 +24,7 @@ const Galerie = () => {
     <h1 className="text-center py-5">Galerie</h1>
     <Search/>
     <div className="d-flex justify-content-center">
-    <ButtonCategory name = "Bapteme"/>
-    <ButtonCategory name = "Bebe"/>
+    <ButtonCategory />
 
   
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-export default function ButtonCategory(props) {
+export default function ButtonCategory() {
 
   const [imagesBapteme, setImageBapteme] = useState ([
 
@@ -32,7 +32,14 @@ export default function ButtonCategory(props) {
   return (
 
     <>
-    <button type="button" className="btn btn-light mx-5 rows col" onClick={handleShowImage }>{props.name}</button>
+    <button type="button" className="btn btn-light mx-5 rows col" onClick={handleShowImage }>Bapteme</button>
+    <button type="button" className="btn btn-light mx-5 rows col" onClick={handleShowImage }>Bebe</button>
+    <button type="button" className="btn btn-light mx-5 rows col" onClick={handleShowImage }>Couple</button>
+    <button type="button" className="btn btn-light mx-5 rows col" onClick={handleShowImage }>Famille</button>
+    <button type="button" className="btn btn-light mx-5 rows col" onClick={handleShowImage }>Grossesse</button>
+    <button type="button" className="btn btn-light mx-5 rows col" onClick={handleShowImage }>Mariage</button>
+
+
 
     </>
     
