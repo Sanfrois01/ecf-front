@@ -15,8 +15,8 @@ const nextConfig = {
   },
 
   env: {
-    STRAPI_API: "https://ecf-charles.herokuapp.com/",
-    API_URL : "https://ecf-charles.herokuapp.com/",
+    STRAPI_API: "https://strapi-h0dw.onrender.com/",
+    API_URL : "https://strapi-h0dw.onrender.com/",
     IMAGES_DOMAIN : "localhost"
   }
 }
