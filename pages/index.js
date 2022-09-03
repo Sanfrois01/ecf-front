@@ -7,9 +7,9 @@ export default function Home() {
 
 
 
-  const { loading , error , data } = useFetch(`${process.env.STRAPI_API}api/homes?populate=%2A`)
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error !</p>
+  // const { loading , error , data } = useFetch(`${process.env.STRAPI_API}api/homes?populate=%2A`)
+  // if (loading) return <p>Loading...</p>
+  // if (error) return <p>Error !</p>
 
 
   const imageData = Object.values(data.data)
@@ -41,4 +41,13 @@ export default function Home() {
       <Footer/>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`${process.env.STRAPI_API}api/homes?populate=%2A`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
 }
