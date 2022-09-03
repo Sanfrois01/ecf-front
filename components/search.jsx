@@ -1,23 +1,26 @@
 import React from 'react';
 import { useEffect, useState } from "react";
+import useFetch from '../hooks/useFetch';
+import Images from './categories/Images';
 
 function Search() {
 
-  const [datas, setDatas] = useState ([]);
-  const [searchCategories, setSearchCategories] = useState ("");
-
-  useEffect( ()=> {
+  const [searchPhotos, setSearchPhotos] = useState ("");
 
 
-   fetch('https://api.unsplash.com/photos/?client_id=9cIpw06nNZZIL58L3dqab_EZPYaRPhmv3-qQUYBuVsY')
-   .then(response => response.json())
-   .then(json => setDatas(json))
+  const { loading , error , data } = useFetch(`${process.env.STRAPI_API}api/photos?populate=%2A`)
 
-  },[]); 
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error !</p>
 
-  const handleSearchCategories= (e) => {
+
+
+  const imageData = Object.values(data.data[6].attributes.image.data)
+
+
+  const handleSearchPhotos= (e) => {
     let value = e.target.value;
-    setSearchCategories(value);
+    value.length > 2 && setSearchPhotos(value);
   };
 
 
@@ -25,29 +28,29 @@ function Search() {
     <>
     <div className="d-flex justify-content-center py-5 ">
       <form className="d-flex">
-          <input  className="form-control me-2" 
+          <input  className="form-control me-3" 
                   type="search" 
-                  placeholder="Catégories" 
+                  placeholder="Rechercher catégorie" 
                   aria-label="Search"
-                  onChange={ handleSearchCategories }/>
+                  onChange={ handleSearchPhotos }/>
       </form>
     </div>
 
 
 
-   <div className='mx-5'>
-
-      {datas
-      .filter((val) => {
-        return val.id.toLowerCase().includes(searchCategories);
-      })
-      .map((val) => {
-        return (
-          <div className="d-flex" key={val.urls.small}>
-          </div>
-        );
-      })}
-    </div>
+    <h2 className='text-center'>{data.data[6].attributes.content}</h2>
+  
+              
+  <div className='d-lg-flex mx-5 py-5'>
+    {imageData
+    .filter((image)=> {
+      return image.attributes.url.includes(searchPhotos.toLowerCase());
+    })
+    .map((image ) => (
+      <Images  key={image.id} {...image}/>
+    ))}
+ 
+  </div>
 
     </>
     );

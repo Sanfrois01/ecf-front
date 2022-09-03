@@ -3,16 +3,14 @@ import Link  from 'next/Link';
 const Header = () =>  {
   return (
     <header>
-      <nav className="navbar navbar-expand bg-dark">
+      <nav className="d-flex navbar navbar-expand bg-dark ">
         <div className="container-fluid">
               <Link href="/">
                 <a className="navbar-brand link-light">Accueil</a>
               </Link>
           <div className="collapse navbar-collapse" id="navbarNav">
-
+          
           <ul className="navbar-nav">
-            <li className="nav-item">
-            </li>
             <li className="nav-item">
               <Link href="/galerie">
                 <a className="nav-link link-secondary">Galerie</a>

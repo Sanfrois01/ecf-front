@@ -2,9 +2,8 @@ import Link  from 'next/Link';
 
 const Footer = () => {
   return (
-    <footer>
-      <nav className="d-flex justify-content-center navbar navbar-expand-lg navbar-expand bg-light">
-        <div className="d-flex justify-content-center">
+    <footer   >
+      <nav className="d-flex justify-content-center navbar navbar-expand bg-light">
           <div className="contrainer-fluid">
             <ul  className= "navbar-nav me-auto mb-5 mb-lg-0">
               <li className="nav-item mx-3">
@@ -30,7 +29,6 @@ const Footer = () => {
               </li>        
             </ul>
           </div>
-        </div>
       </nav>
     </footer>
   )
