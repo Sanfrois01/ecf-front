@@ -41,7 +41,7 @@ function Search() {
     <h2 className='text-center'>{data.data[6].attributes.content}</h2>
   
               
-  <div className='d-lg-flex mx-5 py-5'>
+  <div id="galerie" className='d-lg-flex mx-5 py-5'>
     {imageData
     .filter((image)=> {
       return image.attributes.url.includes(searchPhotos.toLowerCase());

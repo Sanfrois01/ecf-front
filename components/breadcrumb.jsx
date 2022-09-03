@@ -8,7 +8,7 @@ export const Breadcrumb = () => {
           <ol className="breadcrumb">
           <li className="breadcrumb-item"><a href="/galerie">Galerie</a></li>
             <li className="breadcrumb-item"><a href="/bapteme">Bapteme</a></li>
-            <li className="breadcrumb-item"><a href="bebe">Bebe</a></li>
+            <li className="breadcrumb-item"><a href="/bebe">Bebe</a></li>
             <li className="breadcrumb-item"><a href="/couple">Couple</a></li>
             <li className="breadcrumb-item"><a href="/famille">Famille</a></li>
             <li className="breadcrumb-item"><a href="/grossesse">Grossesse</a></li>
